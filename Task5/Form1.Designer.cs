@@ -28,12 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            listBoxResult = new ListBox();
+            btnSort = new Button();
+            SuspendLayout();
+            // 
+            // listBoxResult
+            // 
+            listBoxResult.FormattingEnabled = true;
+            listBoxResult.Location = new Point(257, 13);
+            listBoxResult.Name = "listBoxResult";
+            listBoxResult.Size = new Size(532, 424);
+            listBoxResult.TabIndex = 5;
+            // 
+            // btnSort
+            // 
+            btnSort.Location = new Point(12, 13);
+            btnSort.Name = "btnSort";
+            btnSort.Size = new Size(238, 101);
+            btnSort.TabIndex = 4;
+            btnSort.Text = "Sort";
+            btnSort.UseVisualStyleBackColor = true;
+            btnSort.Click += btnSort_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(listBoxResult);
+            Controls.Add(btnSort);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private ListBox listBoxResult;
+        private Button btnSort;
     }
 }
