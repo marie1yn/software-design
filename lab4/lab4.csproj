@@ -8,4 +8,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MSTest" Version="3.7.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="PolymorphismTests.cs" />
+  </ItemGroup>
+
 </Project>
