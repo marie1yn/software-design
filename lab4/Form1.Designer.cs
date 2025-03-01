@@ -48,6 +48,7 @@
             btnShowInfo.TabIndex = 2;
             btnShowInfo.Text = "Show Info";
             btnShowInfo.UseVisualStyleBackColor = true;
+            btnShowInfo.Click += btnShowInfo_Click;
             // 
             // Form1
             // 

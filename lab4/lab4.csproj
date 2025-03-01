@@ -6,14 +6,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>lab4.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="MSTest" Version="3.7.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="PolymorphismTests.cs" />
   </ItemGroup>
 
 </Project>
