@@ -17,7 +17,7 @@ namespace lab5
         {
             public int AuthorID { get; set; }
             public string Name { get; set; }
-            public virtual ICollection<Book> Books { get; set; } = new List<Book>(); // Initialize collection
+            public virtual ICollection<Book> Books { get; set; } = new List<Book>(); 
         }
 
         public class Book
@@ -51,15 +51,15 @@ namespace lab5
             {
                 var booksWithAuthors = context.Books
                     .Include(b => b.Author)
-                    .Select(b => $"{b.Title} by {b.Author.Name}") // Fixed this line!
+                    .Select(b => $"{b.Title} by {b.Author.Name}") 
                     .ToList();
                 return booksWithAuthors;
             }
         }
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            string authorName = txtAuthorName.Text.Trim(); // Get author from a TextBox
-            string bookTitle = txtBookTitle.Text.Trim();   // Get book title from a TextBox
+            string authorName = txtAuthorName.Text.Trim(); 
+            string bookTitle = txtBookTitle.Text.Trim();   
 
             if (string.IsNullOrEmpty(authorName) || string.IsNullOrEmpty(bookTitle))
             {
@@ -67,7 +67,7 @@ namespace lab5
                 return;
             }
 
-            AddAuthorWithBook(authorName, bookTitle); // Add the book & author to DB
+            AddAuthorWithBook(authorName, bookTitle); 
             MessageBox.Show("Book added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             txtAuthorName.Clear();
@@ -77,7 +77,7 @@ namespace lab5
         private void btnShowBooks_Click(object sender, EventArgs e)
         {
             var books = GetBooksWithAuthors();
-            listBoxBooks.DataSource = null;  // Refresh list
+            listBoxBooks.DataSource = null;  
             listBoxBooks.DataSource = books;
         }
         public void UpdateBookAndAuthor(int bookId, string newTitle, string newAuthorName)
@@ -134,7 +134,7 @@ namespace lab5
             {
                 var books = context.Books
                     .Include(b => b.Author)
-                    .Where(b => b.Author.Name.Contains(authorName)) // Case-insensitive search
+                    .Where(b => b.Author.Name.Contains(authorName)) 
                     .Select(b => $"{b.Title} by {b.Author.Name}")
                     .ToList();
 
