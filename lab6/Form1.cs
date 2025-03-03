@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using static lab5.Form1;
 
 namespace lab6
 {
@@ -9,21 +10,6 @@ namespace lab6
         public Form1()
         {
             InitializeComponent();
-        }
-
-        public class Author
-        {
-            public int AuthorID { get; set; }
-            public string Name { get; set; }
-            public virtual ICollection<Book> Books { get; set; } = new List<Book>();
-        }
-
-        public class Book
-        {
-            public int BookID { get; set; }
-            public string Title { get; set; }
-            public int AuthorID { get; set; }
-            public virtual Author Author { get; set; }
         }
         private async void btnFetchBooks_Click(object sender, EventArgs e)
         {

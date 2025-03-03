@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static lab5.Form1;
 
-namespace lab6
+namespace lab7
 {
     internal class BookstoreContext : DbContext
     {
