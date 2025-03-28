@@ -28,12 +28,48 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Text = "Form1";
+            this.btnSort = new System.Windows.Forms.Button();
+            this.listBoxResult = new System.Windows.Forms.ListBox();
+            this.SuspendLayout();
+            // 
+            // btnSort
+            // 
+            this.btnSort.Location = new System.Drawing.Point(10, 9);
+            this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(208, 76);
+            this.btnSort.TabIndex = 0;
+            this.btnSort.Text = "Sort";
+            this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
+            // 
+            // listBoxResult
+            // 
+            this.listBoxResult.FormattingEnabled = true;
+            this.listBoxResult.ItemHeight = 15;
+            this.listBoxResult.Location = new System.Drawing.Point(224, 9);
+            this.listBoxResult.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxResult.Name = "listBoxResult";
+            this.listBoxResult.Size = new System.Drawing.Size(466, 319);
+            this.listBoxResult.TabIndex = 1;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(700, 338);
+            this.Controls.Add(this.listBoxResult);
+            this.Controls.Add(this.btnSort);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+
 		}
 
 		#endregion
+
+		private Button btnSort;
+		private ListBox listBoxResult;
 	}
 }

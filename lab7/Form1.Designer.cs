@@ -44,17 +44,19 @@
             // lblPageNumber
             // 
             lblPageNumber.AutoSize = true;
-            lblPageNumber.Location = new Point(373, 421);
+            lblPageNumber.Location = new Point(466, 526);
+            lblPageNumber.Margin = new Padding(4, 0, 4, 0);
             lblPageNumber.Name = "lblPageNumber";
-            lblPageNumber.Size = new Size(50, 20);
+            lblPageNumber.Size = new Size(59, 25);
             lblPageNumber.TabIndex = 0;
             lblPageNumber.Text = "label1";
             // 
             // btnPreviousPage
             // 
-            btnPreviousPage.Location = new Point(37, 409);
+            btnPreviousPage.Location = new Point(46, 511);
+            btnPreviousPage.Margin = new Padding(4, 4, 4, 4);
             btnPreviousPage.Name = "btnPreviousPage";
-            btnPreviousPage.Size = new Size(94, 29);
+            btnPreviousPage.Size = new Size(118, 36);
             btnPreviousPage.TabIndex = 1;
             btnPreviousPage.Text = "Previous";
             btnPreviousPage.UseVisualStyleBackColor = true;
@@ -62,9 +64,10 @@
             // 
             // btnNextPage
             // 
-            btnNextPage.Location = new Point(680, 409);
+            btnNextPage.Location = new Point(850, 511);
+            btnNextPage.Margin = new Padding(4, 4, 4, 4);
             btnNextPage.Name = "btnNextPage";
-            btnNextPage.Size = new Size(94, 29);
+            btnNextPage.Size = new Size(118, 36);
             btnNextPage.TabIndex = 2;
             btnNextPage.Text = "Next";
             btnNextPage.UseVisualStyleBackColor = true;
@@ -72,33 +75,38 @@
             // 
             // txtBookTitle
             // 
-            txtBookTitle.Location = new Point(29, 124);
+            txtBookTitle.Location = new Point(36, 155);
+            txtBookTitle.Margin = new Padding(4, 4, 4, 4);
             txtBookTitle.Name = "txtBookTitle";
-            txtBookTitle.Size = new Size(247, 27);
+            txtBookTitle.Size = new Size(308, 31);
             txtBookTitle.TabIndex = 6;
             txtBookTitle.Text = "Book Title";
             // 
             // txtAuthorName
             // 
-            txtAuthorName.Location = new Point(29, 73);
+            txtAuthorName.Location = new Point(36, 91);
+            txtAuthorName.Margin = new Padding(4, 4, 4, 4);
             txtAuthorName.Name = "txtAuthorName";
-            txtAuthorName.Size = new Size(247, 27);
+            txtAuthorName.Size = new Size(308, 31);
             txtAuthorName.TabIndex = 5;
             txtAuthorName.Text = "Author Name";
             // 
             // listBoxBooks
             // 
             listBoxBooks.FormattingEnabled = true;
-            listBoxBooks.Location = new Point(303, 113);
+            listBoxBooks.ItemHeight = 25;
+            listBoxBooks.Location = new Point(379, 141);
+            listBoxBooks.Margin = new Padding(4, 4, 4, 4);
             listBoxBooks.Name = "listBoxBooks";
-            listBoxBooks.Size = new Size(469, 264);
+            listBoxBooks.Size = new Size(585, 329);
             listBoxBooks.TabIndex = 4;
             // 
             // btnSearchBook
             // 
-            btnSearchBook.Location = new Point(654, 71);
+            btnSearchBook.Location = new Point(818, 89);
+            btnSearchBook.Margin = new Padding(4, 4, 4, 4);
             btnSearchBook.Name = "btnSearchBook";
-            btnSearchBook.Size = new Size(118, 29);
+            btnSearchBook.Size = new Size(148, 36);
             btnSearchBook.TabIndex = 12;
             btnSearchBook.Text = "Search";
             btnSearchBook.UseVisualStyleBackColor = true;
@@ -106,17 +114,19 @@
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(303, 73);
+            txtSearch.Location = new Point(379, 91);
+            txtSearch.Margin = new Padding(4, 4, 4, 4);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(316, 27);
+            txtSearch.Size = new Size(394, 31);
             txtSearch.TabIndex = 11;
             txtSearch.Text = "Search";
             // 
             // btnImportBooks
             // 
-            btnImportBooks.Location = new Point(86, 194);
+            btnImportBooks.Location = new Point(108, 242);
+            btnImportBooks.Margin = new Padding(4, 4, 4, 4);
             btnImportBooks.Name = "btnImportBooks";
-            btnImportBooks.Size = new Size(118, 29);
+            btnImportBooks.Size = new Size(148, 36);
             btnImportBooks.TabIndex = 13;
             btnImportBooks.Text = "Add Book";
             btnImportBooks.UseVisualStyleBackColor = true;
@@ -124,9 +134,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(86, 313);
+            button1.Location = new Point(108, 391);
+            button1.Margin = new Padding(4, 4, 4, 4);
             button1.Name = "button1";
-            button1.Size = new Size(118, 29);
+            button1.Size = new Size(148, 36);
             button1.TabIndex = 14;
             button1.Text = "Import Books";
             button1.UseVisualStyleBackColor = true;
@@ -134,19 +145,20 @@
             // 
             // button2
             // 
-            button2.Location = new Point(86, 348);
+            button2.Location = new Point(108, 435);
+            button2.Margin = new Padding(4, 4, 4, 4);
             button2.Name = "button2";
-            button2.Size = new Size(118, 29);
+            button2.Size = new Size(148, 36);
             button2.TabIndex = 15;
             button2.Text = "Export Books";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += btnImportBooks_Click;
+            button2.Click += btnExportBooks_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1000, 562);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(btnImportBooks);
@@ -158,6 +170,7 @@
             Controls.Add(btnNextPage);
             Controls.Add(btnPreviousPage);
             Controls.Add(lblPageNumber);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
